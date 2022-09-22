@@ -2,7 +2,7 @@ const { Schema, model, Types } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
 
-const ReactionSchema = newSchema(
+const ReactionSchema = new Schema(
     {
         reactionId: {
             type: Schema.Types.ObjectId,
@@ -13,7 +13,7 @@ const ReactionSchema = newSchema(
             required: 'The reaction body is required!',
             maxLength: 280
         },
-        username: {
+        writtenBy: {
             type: String,
             required: 'Username is required!'
         },

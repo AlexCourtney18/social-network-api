@@ -9,7 +9,7 @@ router
 
 
 router
-    .route('/:userId/:thoughtId')
+    .route('/:userId/:id')
     .get(getThoughtById)
     .put(updateThought)
     .put(addReaction)
